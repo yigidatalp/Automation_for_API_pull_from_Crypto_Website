@@ -53,10 +53,10 @@ def api_runner():
     df2['timestamp'] = pd.Timestamp('now')
     df = pd.concat([df, df2])
 
-    if not os.path.isfile(r'C:\Users\YİĞİTALP ÖZMEN\Desktop\CurriculumVitae(RESUME)\Documents\DATA ANALYTICS\Alex the Analyst Data Analyst Bootcamp\Python\Codebase\API.csv'):
-        df.to_csv(r'C:\Users\YİĞİTALP ÖZMEN\Desktop\CurriculumVitae(RESUME)\Documents\DATA ANALYTICS\Alex the Analyst Data Analyst Bootcamp\Python\Codebase\API.csv', header='column_names')
+    if not os.path.isfile('API.csv'):
+        df.to_csv('API.csv', header='column_names')
     else:
-        df.to_csv(r'C:\Users\YİĞİTALP ÖZMEN\Desktop\CurriculumVitae(RESUME)\Documents\DATA ANALYTICS\Alex the Analyst Data Analyst Bootcamp\Python\Codebase\API.csv', mode='a', header=False)
+        df.to_csv('API.csv', mode='a', header=False)
 
 
 for i in range(2):  # make it 333
